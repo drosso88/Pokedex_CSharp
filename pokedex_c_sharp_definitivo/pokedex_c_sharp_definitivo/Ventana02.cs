@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 namespace pokedex_c_sharp_definitivo
 {
+    //Diseño por Rocio
     public partial class Ventana02 : Form
     {
         Conexion miConexion = new Conexion();
@@ -27,7 +28,7 @@ namespace pokedex_c_sharp_definitivo
         {
             // label1.Text =nombrePokemon ;
         }
-
+        //Creado por Igor
         private void button1_Click(object sender, EventArgs e)
         {
 
@@ -69,7 +70,10 @@ namespace pokedex_c_sharp_definitivo
             return palabraBienEscrita;
         }
 
+        private void Ventana02_Load(object sender, EventArgs e)
+        {
 
+        }
     }
 }
 

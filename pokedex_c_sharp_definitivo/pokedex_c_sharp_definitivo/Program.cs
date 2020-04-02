@@ -16,7 +16,8 @@ namespace pokedex_c_sharp_definitivo
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new VentanaPrincipal());
+            Application.Run(new Bienvenido());
+            //cambiado por rocio
         }
     }
 }

@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace pokedex_c_sharp_definitivo
 {
-    //probando                                                            
+    //Autores Igor Repyakh y Rocio Soriano                                                          
     public partial class VentanaPrincipal : Form
     {
 
@@ -26,7 +26,7 @@ namespace pokedex_c_sharp_definitivo
             InitializeComponent();
 
         }
-
+         //metodo que le da sonido a los Botones, realizado por Igor
         public void pushButton()
         {
             try
@@ -46,7 +46,7 @@ namespace pokedex_c_sharp_definitivo
             MemoryStream ms = new System.IO.MemoryStream(img);
             return (Image.FromStream(ms));
         }
-
+        //hecho por Igor
         private void clickIzquierdo(object sender, EventArgs e)
         {
             pushButton();
@@ -70,6 +70,7 @@ namespace pokedex_c_sharp_definitivo
             
 
         }
+        //hecho por Igor
 
         private void clickDerecho(object sender, EventArgs e)
         {
@@ -100,7 +101,9 @@ namespace pokedex_c_sharp_definitivo
             ventanaBusqueda.Show();
 
         }
-
+        // Boton de refrescar, cuando pulsamos en la lupa para buscar un pokemon,
+        //al escribir el nombre, si pulsamos en este boton nos devolvera el nombre y datos de dicho nombre
+        //hecho por Rocio
         private void button4_Click(object sender, EventArgs e)
         {
 
@@ -120,11 +123,16 @@ namespace pokedex_c_sharp_definitivo
         internal class MediaPlayer
         {
         }
-
+        //para ir al dataGrid hecho por igor
         private void button5_Click(object sender, EventArgs e)
         {
             Ventana03 ventanGrid = new Ventana03();
             ventanGrid.Show();
+        }
+
+        private void nombrePokemon_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
