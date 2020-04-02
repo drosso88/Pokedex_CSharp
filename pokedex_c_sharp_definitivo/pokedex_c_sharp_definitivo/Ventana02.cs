@@ -69,11 +69,6 @@ namespace pokedex_c_sharp_definitivo
             }
             return palabraBienEscrita;
         }
-
-        private void Ventana02_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }
 
