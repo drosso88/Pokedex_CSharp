@@ -39,7 +39,7 @@ namespace pokedex_c_sharp_definitivo
             try
             {
                 conexion.Open();
-                MySqlCommand consulta = new MySqlCommand("SELECT id,nombre,altura,especie,habitat,habilidad,preEvolucion FROM pokemon ", conexion);
+                MySqlCommand consulta = new MySqlCommand("SELECT * FROM pokemon ", conexion);
                 MySqlDataReader resultado = consulta.ExecuteReader();
                 DataTable pokemons = new DataTable();
                 pokemons.Load(resultado);
@@ -53,6 +53,31 @@ namespace pokedex_c_sharp_definitivo
             }
         }
 
+        public String actualizaPokemons(String id, String dato)
+        {
+            try
+            {
+                conexion.Open();
+                MySqlCommand consulta = new MySqlCommand("UPDATE pokemon SET nombre='"+dato +"'WHERE id='"+id+"'", conexion);
+                MySqlDataReader resultado = consulta.ExecuteReader();
+                String mensaje;
+                if(resultado.RecordsAffected==1)
+                {
+                    mensaje = "Actualizado correctamente";
+                }
+                else
+                {
+                    mensaje = "Error al actualizar el nombre del pokemon";
+                }
+                
+                conexion.Close();
+                return mensaje;
+            }
+            catch (MySqlException e)
+            {
 
+                throw e;
+            }
+        }
     }
 }
